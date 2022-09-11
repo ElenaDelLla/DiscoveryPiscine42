@@ -1,0 +1,20 @@
+nav {
+  display: inline-flex;
+}
+
+.menuItem {
+  width: 100px;
+  background-color: cornflowerblue;
+  margin: 10px;
+}
+
+.options {
+  display: none;
+}
+
+.menuItem:hover .options {
+  position: absolute;
+  display: block;
+  width: 100px;
+  background-color: aquamarine;
+}

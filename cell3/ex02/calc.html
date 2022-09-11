@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <script>
+      window.onload = function () {
+        // se ejecuta al cargar la pagina, en ese momento cargaremos nuestra funcionalidad javascript
+        const boton = document.getElementById("submit");
+        const opIzq = document.getElementById("opIzq");
+        const opDer = document.getElementById("opDer");
+        const operacion = document.getElementById("operacion");
+        boton.addEventListener("click", function onclick() {
+          const numeroIzq = opIzq.value;
+          const numeroDer = opDer.value;
+          const operacionElegida = operacion.value;
+          let resultado;
+          if (numeroIzq >= 0 && numeroDer >= 0) {
+            switch (operacionElegida) {
+              case "+":
+                resultado = parseInt(numeroIzq) + parseInt(numeroDer);
+                break;
+              case "-":
+                resultado = parseInt(numeroIzq) - parseInt(numeroDer);
+                break;
+              case "*":
+                resultado = parseInt(numeroIzq) * parseInt(numeroDer);
+                break;
+              case "/":
+                if (numeroDer == 0) {
+                  alert("It's over 9000!");
+                  console.log("It's over 9000!");
+                } else {
+                  resultado = parseInt(numeroIzq) / parseInt(numeroDer);
+                }
+                break;
+              case "%":
+                if (numeroDer == 0) {
+                  alert("It's over 9000!");
+                  console.log("It's over 9000!");
+                } else {
+                  resultado = parseInt(numeroIzq) % parseInt(numeroDer);
+                }
+                break;
+
+              default:
+                break;
+            }
+            console.log(resultado);
+            alert(resultado);
+          } else {
+            alert("Error :(");
+          }
+        });
+        setInterval(function () {
+          alert("Please, use me...");
+        }, 30000);
+      };
+    </script>
+  </head>
+  <body>
+    <label for="opIzq">Operando Izquierdo</label>
+    <input type="number" name="opIzq" id="opIzq" />
+    <br />
+    <select name="operacion" id="operacion">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <br />
+    <label for="opDer">Operando Derecho</label>
+    <input type="number" name="opDer" id="opDer" />
+    <br />
+    <button type="button" id="submit">Try me!</button>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    </head>
+
+    <body>
+        <label for="izq">Operando izquierdo</label>
+        <input type="number" name="izquierdo" id="izq">
+        <br>
+        <select name="operacion" id="ope">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <br>
+        <label for="dere">Operando derecho</label>
+        <input type="number" name="derecho" id="dere">
+        <br>
+        <button type="button" id="submit" >Try me!</button>
+        <script>
+            window.onload = function() {
+                const boton = document.getElementById("submit");
+                const izq = document.getElementById("izq");
+                const dere = document.getElementById("dere");
+                const operacion = document.getElementById("operacion");
+
+                boton.addEventListener("click", function onclick(){
+                    const numeroizq = izq.value;
+                    const numeroDerecha = dere.value;
+                    const operacion = operacion.value; 
+
+                    let resultado;
+                    if(numeroizq >= 0 && numeroDerecha >= 0){
+                        switch (operacion){
+                            case "+": 
+                                resultado = parseInt(numeroizq) +parseInt(numeroDerecha);
+                            break;
+                            case "-": 
+                                resultado = parseInt(numeroizq) - parseInt(numeroDerecha);
+                            break;
+                            case "*": 
+                                resultado = parseInt(numeroizq) * parseInt(numeroDerecha);
+                            break;
+                            case "/": 
+                                if(numeroDerecha == 0){
+                                    alert("It's over 9000!");
+
+                                }else
+                                resultado = parseInt(numeroizq)  / parseInt(numeroDerecha);
+                            break;
+                            case "% ": 
+                            if(numeroDerecha == 0){
+                                    alert("It's over 9000!");
+
+                                }  else  
+                                resultado = parseInt(numeroizq) % parseInt(numeroDerecha);
+                            break;
+
+
+
+                            
+
+                        }
+                        console.log(resultado);
+                        alert(resultado);
+                    }else{
+                        alert("Error :(");
+                    }
+
+                });
+
+                setTimeout(function(){
+                    alert("Please use me!");
+                },30000);
+
+
+
+
+
+
+
+
+
+
+            }
+
+        </script>
+    </body>

@@ -1,0 +1,33 @@
+tr,td {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    box-shadow: 6px 6px 10px grey;
+}
+h1 {
+    text-align: center;
+}
+.boton {
+    text-align: center;
+    
+}
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+}
+.gris {
+    color: grey;
+}
+p {
+    margin: 5px;
+}

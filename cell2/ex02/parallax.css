@@ -1,0 +1,26 @@
+.parallax span {
+  position: absolute;
+  top: 50%;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax.gatos {
+  background-image: url("https://www.razas-gatos.com/imagenes/azul_ruso_grande.jpg");
+}
+.parallax.negro {
+  background-color: black;
+}
+.parallax.perro {
+  background-image: url("https://lucasylola.es/blog/wp-content/uploads/2019/06/mastin-espanol-1.jpg");
+}
